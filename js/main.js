@@ -1,4 +1,3 @@
-// petit script pour le menu mobile et le formulaire de contact
 
 document.addEventListener("DOMContentLoaded", function () {
   var toggle = document.querySelector(".menu-toggle");
