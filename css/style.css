@@ -1,0 +1,300 @@
+/* Feuille de style principale - Atelier Dubois */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #2b2b2b;
+  background: #f7f5f1;
+  line-height: 1.6;
+}
+
+a {
+  color: #7a5230;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* En-tete */
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e0dcd4;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2b2b2b;
+}
+
+.logo span {
+  color: #7a5230;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #2b2b2b;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+nav a.active {
+  color: #7a5230;
+  border-bottom: 2px solid #7a5230;
+  padding-bottom: 4px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #2b2b2b;
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Bandeau */
+
+.hero {
+  background: #2b2b2b;
+  color: #f7f5f1;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #cfc9bf;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contenu */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #d8c9b5;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.intro p {
+  max-width: 720px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e0dcd4;
+  padding: 24px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+  color: #7a5230;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #4a4a4a;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery div {
+  background: #ddd6ca;
+  border: 1px solid #cfc7b9;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6f6a60;
+  font-size: 14px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Formulaire de contact */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info p {
+  margin-bottom: 14px;
+}
+
+.contact-info strong {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #7a5230;
+  margin-bottom: 2px;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c9c2b6;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  margin-top: 20px;
+  background: #7a5230;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #5e3e22;
+}
+
+.form-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6f6a60;
+}
+
+.map-placeholder {
+  margin-top: 30px;
+  background: #ddd6ca;
+  border: 1px solid #cfc7b9;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6f6a60;
+  font-size: 14px;
+}
+
+/* Pied de page */
+
+footer {
+  background: #2b2b2b;
+  color: #cfc9bf;
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 13px;
+}
+
+footer a {
+  color: #f7f5f1;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .services,
+  .gallery,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    background: #ffffff;
+    border: 1px solid #e0dcd4;
+    padding: 16px;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  header {
+    position: relative;
+  }
+}
